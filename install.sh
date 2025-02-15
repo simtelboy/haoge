@@ -26,7 +26,7 @@ sleep 1
 
 # 下载 zzzz.jpg
 echo -e "${BLUE}正在下载 zzzz.jpg...${NC}"
-curl -o zzzz.jpg "https://github.com/simtelboy/haoge/blob/main/zzzz.jpg?raw=true"
+curl -o zzzz.jpg "https://github.com/simtelboy/haoge/blob/main/zzzz.jpg"
 
 # 检查下载是否成功
 if [ $? -eq 0 ]; then
