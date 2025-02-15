@@ -2,9 +2,9 @@
 # 一键安装
 # apt update
 # apt install -y curl
-# bash <(curl -L https://github.com/simtelboy/haoge/blob/main/install.sh)
+# bash <(curl -L https://raw.githubusercontent.com/simtelboy/haoge/refs/heads/main/install.sh)
 # 
-# 一条语句安装: apt update -y && apt install -y curl && bash <(curl -L https://github.com/simtelboy/haoge/blob/main/install.sh)
+# 一条语句安装: apt update -y && apt install -y curl && bash <(curl -L https://raw.githubusercontent.com/simtelboy/haoge/refs/heads/main/install.sh)
 
 # 设置颜色
 RED='\033[0;31m'
