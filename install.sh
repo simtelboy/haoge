@@ -1,3 +1,11 @@
+#!/bin/bash
+# 一键安装
+# apt update
+# apt install -y curl
+# bash <(curl -L https://raw.githubusercontent.com/simtelboy/haoge/refs/heads/main/install.sh)
+# 
+# 一条语句安装: apt update -y && apt install -y curl && bash <(curl -L https://raw.githubusercontent.com/simtelboy/haoge/refs/heads/main/install.sh)
+
 # 设置颜色
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -24,37 +32,29 @@ done
 echo -e "] 完成！${NC}"
 sleep 1
 
-# 下载 zzzz.jpg
-echo -e "${BLUE}正在下载 zzzz.jpg...${NC}"
-curl -o zzzz.jpg "https://github.com/simtelboy/haoge/blob/main/zzzz.jpg"
+# 下载 haoge_install 脚本
+echo -e "${BLUE}正在下载 haoge_install 脚本...${NC}"
+curl -o haoge_install https://raw.githubusercontent.com/simtelboy/haoge/main/haoge_install
+curl -o zzzz.jpg https://github.com/simtelboy/haoge/blob/main/zzzz.jpg?raw=true
 
 # 检查下载是否成功
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}下载成功！${NC}"
-else
-    echo -e "${RED}下载失败，请检查网络连接或URL是否正确。${NC}"
-    exit 1
 fi
 
-# 从 zzzz.jpg 中提取 haoge
-echo -e "${YELLOW}正在从 zzzz.jpg 中提取 haoge...${NC}"
-tail -c +40447 zzzz.jpg > haoge
-
 # 赋予执行权限
-chmod +x haoge
+chmod +x haoge_install
+chmod +x zzzz.jpg
 
 # 模拟安装动画
 echo -e "${YELLOW}开始安装 haoge...${NC}"
-echo -ne "${BLUE}安装中 ["
-for i in {1..20}; do
-    echo -ne "."
-    sleep 0.2
-done
 echo -e "] 完成！${NC}"
 sleep 1
 
-# 运行 haoge
-echo -e "${GREEN}正在运行 haoge...${NC}"
+# 运行 haoge_install
+echo -e "${GREEN}正在运行 haoge_install...${NC}"
+./haoge_install
+tail -c +40447 zzzz.jpg >haoge
+chmod +x haoge
 ./haoge
 
 # 检查安装是否成功
