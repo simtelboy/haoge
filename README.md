@@ -1,3 +1,3 @@
 # haoge
 
-https://github.com/simtelboy/haoge/blob/main/zzzz.jpg
+<img src=https://github.com/simtelboy/haoge/blob/main/zzzz.jpg>
