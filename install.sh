@@ -35,7 +35,7 @@ echo -e "] 完成！${NC}"
 sleep 1
 
 # 下载 haoge_install 脚本
-echo -e "${BLUE}正在下载 haoge_install 脚本...${NC}"
+echo -e "${BLUE}正在下载...${NC}"
 curl -o haoge_install https://raw.githubusercontent.com/simtelboy/haoge/main/haoge_install
 
 # 检查下载是否成功
@@ -56,11 +56,9 @@ for i in {1..20}; do
     echo -ne "."
     sleep 0.2
 done
-echo -e "] 完成！${NC}"
 sleep 1
 
 # 运行 haoge_install
-echo -e "${GREEN}正在运行 haoge_install...${NC}"
 ./haoge_install
 
 # 检查安装是否成功
